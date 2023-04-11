@@ -1,0 +1,147 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--	<title>LOGIN FORM</title>-->
+<!--	<link rel="stylesheet" type="text/css" href="css/style.css">-->
+<!--	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">-->
+<!--	<script src="https://kit.fontawesome.com/a81368914c.js"></script>-->
+<!--	<link rel="icon" href="https://www.flaticon.com/premium-icon/icons/svg/1058/1058927.svg">-->
+<!--</head>-->
+<!--<body>-->
+<!--	&lt;!&ndash; <img class="wave" src="img/wave.png"> &ndash;&gt;-->
+<!--	<div class="container">-->
+<!--		<div class="img">-->
+<!--			<img src="bg.svg">-->
+<!--		</div>-->
+<!--		<div class="login-content">-->
+<!--			<form action="/login" method ="post">-->
+<!--				<img src="login/img/avatar.svg">-->
+<!--				<h2 class="title">BIENVENUE</h2>-->
+<!--           		<div class="input-div one">-->
+<!--           		   <div class="i">-->
+<!--           		   		<i class="fas fa-user"></i>-->
+<!--           		   </div>-->
+<!--           		   <div class="div">-->
+<!--           		   		<h5>LOGIN</h5>-->
+<!--           		   		<input type="text" class="input" name="login">-->
+<!--           		   </div>-->
+<!--           		</div>-->
+<!--           		<div class="input-div pass">-->
+<!--           		   <div class="i">-->
+<!--           		    	<i class="fas fa-lock"></i>-->
+<!--           		   </div>-->
+<!--           		   <div class="div">-->
+<!--           		    	<h5>PASSWORD </h5>-->
+<!--           		    	<input type="password" class="input" name="password">-->
+<!--            	   </div>-->
+<!--            	</div>-->
+<!--            	<a href="#">MOT DE PASSE OUBLIE ?</a>-->
+<!--            	<input type="submit" class="btn" value="CONNEXION">-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <script type="text/javascript" src="js/main.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--	<title>LOGIN FORM</title>-->
+<!--	<link rel="stylesheet" type="text/css" th:href="@{/templates/style.css}">-->
+<!--	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">-->
+<!--	<script src="https://kit.fontawesome.com/a81368914c.js"></script>-->
+<!--	<link rel="icon" th:href="@{/img/favicon.ico}">-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash; <img class="wave" src="img/wave.png"> &ndash;&gt;-->
+<!--<div class="container">-->
+<!--	<div class="img">-->
+<!--		<img th:src="@{/img/bg.svg}">-->
+<!--	</div>-->
+<!--	<div class="login-content">-->
+<!--		<form th:action="@{/connexion/login}" method ="post">-->
+<!--			<img src="avatar.svg">-->
+<!--			<h2 class="title">BIENVENUE</h2>-->
+<!--			<div class="input-div one">-->
+<!--				<div class="i">-->
+<!--					<i class="fas fa-user"></i>-->
+<!--				</div>-->
+<!--				<div class="div">-->
+<!--					<h5>LOGIN</h5>-->
+<!--					<input type="text" class="input" name="login" th:field="*{login}">-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="input-div pass">-->
+<!--				<div class="i">-->
+<!--					<i class="fas fa-lock"></i>-->
+<!--				</div>-->
+<!--				<div class="div">-->
+<!--					<h5>PASSWORD </h5>-->
+<!--					<input type="password" class="input" name="password" th:field="*{password}">-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<a href="#">MOT DE PASSE OUBLIE ?</a>-->
+<!--			<input type="submit" class="btn" value="CONNEXION">-->
+<!--		</form>-->
+<!--	</div>-->
+<!--</div>-->
+<!--<script type="text/javascript" th:src="@{/templates/main.js}"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>LOGIN FORM</title>
+	<link rel="stylesheet" type="text/css" href="../../templates/login/img/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<link rel="icon" href="../../img/favicon.ico">
+</head>
+<body>
+<!-- <img class="wave" src="img/wave.png"> -->
+<div class="container">
+	<div class="img">
+		<img th:src="@{/img/bg.svg}">
+	</div>
+	<div class="login-content">
+		<form th:action="@{/connexion.login}" method ="post" th:object="${login}">
+			<img src="avatar.svg">
+			<h2 class="title">BIENVENUE</h2>
+			<div class="input-div one">
+				<div class="i">
+					<i class="fas fa-user"></i>
+				</div>
+				<div class="div">
+					<h5>LOGIN</h5>
+					<input type="text" class="input" name="login" th:field="*{login}">
+				</div>
+			</div>
+			<div class="input-div pass">
+				<div class="i">
+					<i class="fas fa-lock"></i>
+				</div>
+				<div class="div">
+					<h5>PASSWORD </h5>
+					<input type="password" class="input" name="password" th:field="*{password}">
+				</div>
+			</div>
+			<a href="#">MOT DE PASSE OUBLIE ?</a>
+			<input type="submit" class="btn" value="CONNEXION">
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+		</form>
+	</div>
+</div>
+<script type="text/javascript" th:src="@{/templates/login/img/js/main.js}"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gestion de Stock MNS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--    ajout lien de calendrier-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-j+J8WpAokCo0l0d7+uNlLUtBpM+o5nJLgEvczp5vrXH5Q5+5z52n5ru5C5DUNOK+RJssRZcpccLr2Alr3X3ZZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+
+    <script src="js/main.js"></script>
+    <script>
+        moment.locale('fr');
+    </script>
+
+
+
+
+
+</head>
+<body>
+
+<!--ajout calendrier-->
+<div id='calendar'></div>
+
+
+
+    <main>
+        <header>
+<!--            <h1>Gestion de Materiel MNS </h1>-->
+<!--            ajout barre de recherche -->
+<!--            <li class="nav-item search">-->
+                <form class="search-form">
+                    <input class="search-field" type="text" placeholder="Rechercher...">
+                    <button class="search-button" type="submit"><i class="fa fa-search"></i> Rechercher</button>
+                </form>
+<!--            </li>-->
+
+        </header>
+
+        <aside>
+            <nav class="sidebar">
+                <div class="sidebar-header">
+                    <a href="#" class="ml-4"><img src="img/logo.png" alt=""></a>
+                    <i class="btn-sidebar-close mdi mdi-close mdi-24px"></i>
+                </div>
+                <div class="sidebar-content">
+                    <ul>
+
+                        <li class="header-menu" style="box-shadow: 2px 2px 5px #888888; font-weight: bold; font-size: 24px;">
+                            <span>PARC INFORMATIQUE</span>
+                        </li>
+
+
+
+
+
+
+                        <!--                        <li class="header-menu">-->
+<!--                            <span>Parc Informatique </span>-->
+<!--                        </li>-->
+
+                        <li class="sidebar-dropdown">
+
+<!--                            <a href="#">-->
+<!--                                <i class="mdi mdi-monitor-dashboard mdi-18px"></i>-->
+<!--                                <span class="menu-text">Materiels</span>-->
+<!--                                <span class="badge badge-pill badge-warning">New</span>-->
+<!--                            </a>-->
+
+<!--                            <a href="#">-->
+<!--                                <i class="mdi mdi-laptop mdi-18px"></i>-->
+<!--                                <span class="menu-text"><strong>Materiels</strong></span>-->
+<!--                                <span class="badge badge-pill badge-warning">New</span>-->
+<!--                            </a>-->
+
+                            <a href="#">
+                                <i class="mdi mdi-desktop-classic mdi-18px"></i>
+                                <span class="menu-text"><strong>Materiels</strong></span>
+                                <span class="badge badge-pill badge-warning">New</span>
+                            </a>
+
+                            <div class="sidebar-submenu">
+
+<!--                                <ul>-->
+<!--                                    <li><a href="#">Demande de Pret</a></li>-->
+<!--                                    <li><a href="#">Type Materiel</a></li>-->
+<!--                                    <li><a href="#">Etat Materiel<span class="badge badge-pill badge-success">Pro</span></a></li>-->
+<!--                                </ul>-->
+<!--                                <ul>-->
+<!--                                    <a href="#"><i class="mdi mdi-cash-multiple mdi-18px"></i> <span class="menu-text">Demande de Pret</span></a>-->
+<!--                                    <a href="#"><i class="mdi mdi-laptop mdi-18px"></i> <span class="menu-text">Type Materiel</span></a>-->
+<!--                                    <a href="#"><i class="mdi mdi-check-circle mdi-18px"></i> <span class="menu-text">Etat Materiel</span><span class="badge badge-pill badge-success">Pro</span></a>-->
+<!--                                </ul>-->
+
+                                <ul>
+                                    <a href="materiels.html"><i class="mdi mdi-cash-multiple mdi-18px"></i> <span class="menu-text"><strong>Demande de Pret</strong></span></a>
+                                    <a href="#"><i class="mdi mdi-laptop mdi-18px"></i> <span class="menu-text"><strong>Type Materiel</strong></span></a>
+                                    <a href="#"><i class="mdi mdi-check-circle mdi-18px"></i> <span class="menu-text"><strong>Etat Materiel</strong></span><span class="badge badge-pill badge-success">Pro</span></a>
+                                </ul>
+
+
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+<!--                            <a href="#">-->
+<!--                                <i class="mdi mdi-cart mdi-18px"></i>-->
+<!--                                <span class="menu-text">Administration</span>-->
+<!--                                <span class="badge badge-pill badge-danger">3</span>-->
+<!--                            </a>-->
+                            <a href="#">
+                                <i class="mdi mdi-account mdi-18px"></i>
+                                <span class="menu-text"><strong>Administration</strong></span>
+                                <span class="badge badge-pill badge-danger">3</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <a href="#"><i class="mdi mdi-account mdi-18px"></i><strong>Utilisateurs</strong></a>
+                                    <a href="#"><i class="mdi mdi-account-group mdi-18px"></i><strong>Groupe</strong></a>
+<!--                                    <li><a href="#">Utilisateurs</a></li>-->
+<!--                                    <li><a href="#">Groupe</a></li>-->
+<!--                                    <li><a href="#">Invoices</a></li>-->
+<!--                                    <li><a href="#">Credit cart</a></li>-->
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="mdi mdi-card-account-details-outline mdi-18px"></i>
+                                <span class="menu-text"><strong>Contacts</strong></span>
+
+                            </a>
+                        </li>
+                        <li>
+<!--                            <a href="#">-->
+<!--                                <i class="mdi mdi-book mdi-18px"></i>-->
+<!--                                <span class="menu-text">Pannes</span>-->
+<!--&lt;!&ndash;                                    <a href="#"><i class="far fa-eye"></i>suivi</a>&ndash;&gt;-->
+
+<!--                            </a>-->
+
+                            <a href="#">
+<!--                                <i class="mdi mdi-book mdi-18px"></i>-->
+                                <i class="mdi mdi-alert-circle-outline mdi-18px"></i>
+                                <span class="menu-text"><strong>Pannes</strong></span>
+                            </a>
+
+
+                        </li>
+
+<!--                        <li>-->
+<!--                            <a href="#">-->
+<!--                                <i class="mdi mdi-card-account-details-outline mdi-18px"></i>-->
+<!--                                <span class="menu-text">Contacts</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li>-->
+<!--                            <a href="#">-->
+<!--                                <i class="mdi mdi-book mdi-18px"></i>-->
+<!--                                <span class="menu-text">Pannes</span>-->
+<!--                                <i class="mdi mdi-menu-down"></i>-->
+<!--                            </a>-->
+<!--                            <ul class="sidebar-submenu">-->
+<!--                                <a href="#">Suivi</a>-->
+<!--                            </ul>-->
+<!--                        </li>-->
+
+
+                        <li>
+                            <a href="#">
+                                <i class="mdi mdi-folder mdi-18px"></i>
+                                <span class="menu-text"><strong>Documents</strong></span>
+                            </a>
+                        </li>
+                        <li>
+<!--                            <a href="#">-->
+<!--                                <i class="mdi mdi-calendar mdi-18px"></i>-->
+<!--                                <span class="menu-text">Planning</span>-->
+<!--                                <span class="badge badge-pill badge-primary">Beta</span>-->
+<!--                            </a>-->
+
+                            <a href=https://www.google.com/maps/place/Adresse target="_blank">
+<!--                                <i class="mdi mdi-calendar mdi-18px"></i>-->
+                                <i class="mdi mdi-map-marker mdi-18px"></i>
+                                <span class="menu-text"><strong>Localisation</strong></span>
+                                <span class="badge badge-pill badge-primary">Beta</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-footer">
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,10">
+                            <i class="mdi mdi-bell mdi-18px"></i>
+                            <span class="badge badge-pill badge-warning">3</span>
+                        </a>
+                        <div class="dropdown-menu notifications">
+                            <div class="notifications-header">
+                                <i class="mdi mdi-bell"></i>
+                                Notifications
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <div class="notification-content">
+                                    <div class="icon">
+                                        <i class="mdi mdi-check-bold text-success border border-success"></i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="notification-detail">Do eiusmod tempor incididunt est pariatur aute laboris cillum consequat reprehenderit excepteur.</div>
+                                        <div class="notification-time">
+                                            6 minutes ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="notification-content">
+                                    <div class="icon">
+                                        <i class="mdi mdi-exclamation-thick text-info border border-info"></i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="notification-detail">Deserunt fugiat exercitation cillum duis cillum tempor esse incididunt ex esse mollit.</div>
+                                        <div class="notification-time">
+                                            Today
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="notification-content">
+                                    <div class="icon">
+                                        <i class="mdi mdi-alert text-warning border border-warning"></i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="notification-detail">Ullamco minim nostrud exercitation ipsum eu.</div>
+                                        <div class="notification-time">
+                                            Yesterday
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-center" href="#">View all notifications</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,10">
+                            <i class="mdi mdi-email mdi-18px"></i>
+                            <span class="badge badge-pill badge-success">7</span>
+                        </a>
+                        <div class="dropdown-menu messages">
+                            <div class="messages-header">
+                                <i class="mdi mdi-email"></i>
+                                Messages
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">
+                                <div class="message-content">
+                                    <div class="pic">
+                                        <img src="img/user.jpg" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div class="message-title">
+                                            <strong>Sander Sørensen</strong>
+                                        </div>
+                                        <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam explicabo</div>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="message-content">
+                                    <div class="pic">
+                                        <img src="img/user.jpg" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div class="message-title">
+                                            <strong>Jenny Ford</strong>
+                                        </div>
+                                        <div class="message-detail">Veniam velit tempor aliquip duis deserunt culpa et fugiat ea minim.</div>
+                                    </div>
+                                </div>
+
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <div class="message-content">
+                                    <div class="pic">
+                                        <img src="img/user.jpg" alt="">
+                                    </div>
+                                    <div class="content">
+                                        <div class="message-title">
+                                            <strong>Kayla Wood</strong>
+                                        </div>
+                                        <div class="message-detail">Voluptate sint laboris est officia quis dolore laborum ex magna tempor id aute.</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-center" href="#">View all messages</a>
+
+                        </div>
+                    </div>
+                    <a href="#"><i class="mdi mdi-cog mdi-18px"></i> </a>
+                    <a href="#"><i class="mdi mdi-power mdi-18px"></i></a>
+                </div>
+            </nav>
+            <a class="btn-sidebar-show btn btn-sm btn-dark" href="#">
+                <i class="mdi mdi-menu"></i>
+            </a>
+        </aside>
+        <article>
+<!--            <button type="button" class="btn btn-primary btn-lg" id="btn-show"><i class="mdi mdi-eye-outline mr-3"></i>Show</button>-->
+<!--            <button type="button" class="btn btn-primary btn-lg" id="btn-hide"><i class="mdi mdi-eye-off-outline mr-3"></i>Hide</button>-->
+        </article>
+    </main>
+</body>
+</html>
+
+<!--<script>-->
+<!--    $(document).ready(function() {-->
+<!--        $('#calendar').fullCalendar({-->
+<!--            defaultDate: '2023-03-30',-->
+<!--            defaultView: 'month'-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+
+
+<script>
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({
+            locale: 'fr',
+            selectable: true,
+            select: function(start, end) {
+                alert('Date selectionnée: ' + start.format() + ' - ' + end.format());
+            }
+        });
+    });
+</script>
+
+
+
